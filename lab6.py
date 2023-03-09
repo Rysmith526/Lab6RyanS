@@ -5,7 +5,7 @@ Date: 3/9/23
 """
 
 
-def encode(password):
+def encode(password):  # Encodes an inputted password
     encoded = ''
     for digit in password:
         dig = int(digit)
@@ -31,10 +31,11 @@ def main():
         print(menu)
         choice = int(input('Please enter an option: '))
         if choice == 1:
+            # Calls encode function to store encoded password
             password = encode(input('Please enter your password to encode: '))
             print('Your password has been encoded and stored!')
         elif choice == 2:
-            print(f"The encoded password is {password}, and the original password is {decode(password)}.")
+            print(f'The encoded password is {password}, and the original password is {decode(password)}.')
         elif choice == 3:
             break
         print()
